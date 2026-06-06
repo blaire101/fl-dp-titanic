@@ -1,0 +1,5 @@
+Method,Accuracy,F1-Score,epsilon,sigma
+Centralized,0.8034,0.7407,N/A,0
+FedAvg (No DP),0.7921,0.7218,inf,0
+DP-FedAvg (epsilon=5),0.6966,0.5500,5,0.4845
+DP-FedAvg (epsilon=1),0.4326,0.3567,1,2.4224
