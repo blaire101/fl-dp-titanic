@@ -170,3 +170,31 @@ jupyter notebook notebook/federated_dp_titanic.ipynb
 3. Zhao Y, et al. *Federated Learning with Non-IID Data.* arXiv:1806.00582, 2018.
 4. Dwork C, Roth A. *The Algorithmic Foundations of Differential Privacy.* Foundations and Trends in TCS, 2014.
 5. Zhu L, et al. *Deep Leakage from Gradients.* NeurIPS, 2019.
+
+---
+
+## Dataset
+
+**Source:** [Stanford CS109 Titanic CSV](https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv)
+
+| Field | Type | Description |
+|-------|------|-------------|
+| Survived | int | Target variable — 0 = died, 1 = survived |
+| Pclass | int | Cabin class — 1 (1st), 2 (2nd), 3 (3rd) |
+| Sex | str | male / female → encoded 0 / 1 |
+| Age | float | Passenger age in years |
+| SibSp | int | # siblings / spouses aboard |
+| Parch | int | # parents / children aboard |
+| Fare | float | Ticket price (GBP, 1912) |
+
+**Descriptive statistics:**
+
+| Feature | Mean | Median | Std | Notes |
+|---------|------|--------|-----|-------|
+| Survived | 0.382 | — | — | 38.2% overall survival rate |
+| Age | 29.4 | 28.0 | 14.5 | Range: 0.17 – 80 yrs |
+| Fare | 32.1 | 14.5 | 49.7 | Right-skewed — outliers up to 512 |
+
+Key insight: **Sex is the strongest single predictor** — female survival 72.9% vs male 18.9%.
+Fare is highly right-skewed: a small number of first-class passengers pull the mean far above the median.
+All 6 features are StandardScaler-normalised before training.
