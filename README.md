@@ -155,7 +155,7 @@ fl-dp-titanic/
 ## Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/fl-dp-titanic.git
+git clone https://github.com/blaire101/fl-dp-titanic.git
 cd fl-dp-titanic
 pip install -r requirements.txt
 jupyter notebook notebook/federated_dp_titanic.ipynb
